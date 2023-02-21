@@ -5,16 +5,16 @@ import { verifyAdmin, verifyUser } from "../utils/verifyAccess.js";
 const router = express.Router();
 
 //create
-router.post("/", createReservation);
+router.post("/", verifyUser, createReservation);
 
 //update
-router.put("/:id", updateReservation);
+router.put("/:id", verifyUser, updateReservation);
 //delete
 router.delete("/:id", verifyAdmin, deleteReservation);
 //get
-router.get("/:id", getReservation);
+router.get("/:id", verifyUser, getReservation);
 //get all
-router.get("/", getReservations);
+router.get("/", verifyUser, getReservations);
 
 
 

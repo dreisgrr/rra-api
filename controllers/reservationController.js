@@ -72,7 +72,7 @@ export const getReservations = async (req, res, next) => {
             }).limit(req.query.limit).sort({updatedAt: -1});
             res.status(200).json(reservations)
         } catch (error) {
-            next(err);
+            next(error);
         }
     }
     else {

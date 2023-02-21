@@ -5,3 +5,8 @@ export const createError = ( status, message ) => {
 
     return error;
 }
+
+export const ERROR_MESSAGE = {
+    NOTFOUND: "Login Error: User not found",
+    INVALID: "Login Error: Invalid Credentials"
+}

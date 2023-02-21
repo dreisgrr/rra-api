@@ -15,10 +15,11 @@ router.post("/", verifyAdmin, createSite);
 
 //update
 router.put("/:id", verifyAdmin, updateSite);
+
 //delete
 router.delete("/:id", verifyAdmin, deleteSite);
 //get
-router.get("/:id", getSite);
+router.get("/:id", verifyAdmin, getSite);
 //get all
 router.get("/", getSites);
 

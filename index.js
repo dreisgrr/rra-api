@@ -31,7 +31,7 @@ mongoose.connection.on("connected", () => {
 });
 
 //middlewares
-app.use(cors());
+app.use(cors({origin: ['http://localhost:3000', 'http://35.153.93.96'], credentials: true}));
 app.use(cookieParser());
 app.use(express.json());
 
