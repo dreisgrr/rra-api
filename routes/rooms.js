@@ -10,7 +10,7 @@ router.get("/getavailable", verifyUser, getAvailableRooms);
 router.post("/:siteId", verifyAdmin, createRoom);
 
 //update
-router.put("/:id", verifyAdmin, updateRoom);
+router.put("/:rid", verifyAdmin, updateRoom);
 //delete
 router.delete("/:id/:siteId", verifyAdmin, deleteRoom);
 //get

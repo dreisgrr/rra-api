@@ -23,7 +23,7 @@ export const createRoom = async (req, res, next) => {
 export const updateRoom = async (req, res, next) => {
     try {
         const updatedRoom = await Room.findByIdAndUpdate(
-            req.params.id, 
+            req.params.rid, 
             { $set: req.body },
             { new: true }
         );

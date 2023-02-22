@@ -23,10 +23,10 @@ export const verifyToken = (req, res, next) => {
 
 export const verifyUser = (req, res, next) => {
     verifyToken(req, res, () => {
-        // console.log('verifyUser')
+        console.log('verifyUser')
         // console.log(req.user?.id)
-        // console.log(req.query)
-        // console.log(req.errMessage)
+        console.log(req.query)
+        console.log(req.errMessage)
         if(req.errMessage != null) {
             return next(createError(403, req.errMessage))
         }
